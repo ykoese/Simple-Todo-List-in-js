@@ -9,7 +9,7 @@ const clearButton = document.querySelector("#clear-todos");
 
 eventListeners();
 
-function eventListeners() { // Tüm event listenerlar
+function eventListeners() { // aall event listeners
     form.addEventListener("submit", addTodo);
     document.addEventListener("DOMContentLoaded", loadAllTodosToUI);
     secondCardBody.addEventListener("click", deleteTodo);
@@ -155,7 +155,7 @@ function showAlert(type, message) {
 
 
 }
-function addTodoToUI(newTodo) { // String değerini list item olarak UI'ya ekleyecek.
+function addTodoToUI(newTodo) { // it will add value of String as list item to UI.
     /*
 
     <li class="list-group-item d-flex justify-content-between">
@@ -166,7 +166,7 @@ function addTodoToUI(newTodo) { // String değerini list item olarak UI'ya ekley
 
                         </li>
     */
-    // List Item Oluşturma
+    // creating List Item 
     const listItem = document.createElement("li");
     // Link oluşturma
     const link = document.createElement("a");
@@ -176,12 +176,12 @@ function addTodoToUI(newTodo) { // String değerini list item olarak UI'ya ekley
 
     listItem.className = "list-group-item d-flex justify-content-between";
 
-    // Text Node Ekleme
+    // add Text Node 
 
     listItem.appendChild(document.createTextNode(newTodo));
     listItem.appendChild(link);
 
-    // Todo List'e List Item'ı ekleme
+    // add List Item to Todo List
 
     todoList.appendChild(listItem);
     todoInput.value = "";
